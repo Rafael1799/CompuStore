@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración de caracteres y viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Computadoras</title>
+  <!-- Estilos de Bootstrap y CSS personalizado -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <!-- Barra de navegación con enlaces a secciones principales -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">CompuStore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#carrito">Carrito</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registrate.html">Regístrate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="container hero text-center">
+    <h1>Computadoras para tu trabajo y entretenimiento</h1>
+    <p class="lead">Encuentra laptops y PCs de escritorio con componentes de alto rendimiento y diseño moderno.</p>
+    <a href="#productos" class="btn btn-light btn-lg mt-3">Ver productos</a>
+  </header>
+
+  <main class="container mb-5">
+    
+    <section id="productos" class="row g-4" style="margin-left: auto; width: fit-content;">
+      <article class="col-12 col-md-6 col-xl-4">
+        <div class="card card-product h-100">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Laptop Gamer Pro" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Laptop Gamer Pro</h5>
+            <p class="card-text flex-grow-1">Procesador i7, 16GB RAM, SSD 512GB, GTX 1660Ti.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="product-price" data-price-id="1"></span>
+              <button class="btn btn-primary" onclick="addToCart(1)">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-12 col-md-6 col-xl-4">
+        <div class="card card-product h-100">
+          <img src="https://mipclista.com/img/p/9/2/8/9/9289.jpg" class="card-img-top" alt="PC de Escritorio" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">PC de Escritorio</h5>
+            <p class="card-text flex-grow-1">Ryzen 5, 16GB RAM, SSD 1TB, gráfica RTX 3050.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="product-price" data-price-id="2"></span>
+              <button class="btn btn-primary" onclick="addToCart(2)">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="col-12 col-md-6 col-xl-4">
+        <div class="card card-product h-100">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Laptop Ultrafina" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Laptop Ultrafina</h5>
+            <p class="card-text flex-grow-1">Intel i5, 8GB RAM, SSD 256GB, pantalla Full HD.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="product-price" data-price-id="3"></span>
+              <button class="btn btn-primary" onclick="addToCart(3)">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="carrito" class="mt-5">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title">Carrito de compras</h2>
+          <p class="card-text">Añade productos a tu carrito y revisa el total antes de finalizar tu compra.</p>
+          <ul id="cartList" class="list-group mb-3"></ul>
+          <div class="d-flex justify-content-between align-items-center">
+            <strong>Total:</strong>
+            <span class="product-price">$<span id="total">0.00</span></span>
+          </div>
+          <button id="checkoutBtn" class="btn btn-primary mt-3">Finalizar compra</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- pie de pagina para las redes sociales -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-3 mb-md-2">VISÍTANOS EN NUESTRAS REDES</p>
+     <div class="d-flex justify-content-center gap-3">
+  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32" />
+  </a>
+  <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" width="32" height="32" />
+  </a>
+  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="32" height="32" />
+  </a>
+  <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="32" height="32" />
+  </a>
+</div>
+      <p class="mt-3 mb-0">© 2026 Derechos Reservados</p>
+    </div>
+  </footer>
+
+  <!-- Script principal: gestión de productos, carrito y funcionalidad de la tienda -->
+  <script>
+    // Definición de productos disponibles en la tienda
+    const products = [
+      {
+        id: 1,
+        name: 'Laptop Gamer Pro',
+        description: 'Procesador i7, 16GB RAM, SSD 512GB, GTX 1660Ti.',
+        price: 1299.99,
+        image: 'imagenes/laptop-gamer.jpg'
+      },
+      {
+        id: 2,
+        name: 'PC de Escritorio',
+        description: 'Ryzen 5, 16GB RAM, SSD 1TB, gráfica RTX 3050.',
+        price: 999.99,
+        image: 'imagenes/pc-de-escritorio.jpg'
+      },
+      {
+        id: 3,
+        name: 'Laptop Ultrafina',
+        description: 'Intel i5, 8GB RAM, SSD 256GB, pantalla Full HD.',
+        price: 799.99,
+        image: 'imagenes/laptop-ultrafina.png'
+      }
+    ];
+
+    const cart = [];
+
+    // Renderiza los precios de los productos en la página
+    function renderProductPrices() {
+      products.forEach(product => {
+        const priceElement = document.querySelector(`.product-price[data-price-id="${product.id}"]`);
+        if (priceElement) {
+          priceElement.textContent = `$${product.price.toFixed(2)}`;
+        }
+      });
+    }
+
+    renderProductPrices();
+
+    // Añade un producto al carrito o incrementa su cantidad si ya existe
+    function addToCart(id) {
+      const product = products.find(item => item.id === id);
+      if (!product) return;
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ ...product, quantity: 1 });
+      }
+      updateCart();
+    }
+
+    // Elimina un producto del carrito
+    function removeFromCart(id) {
+      const index = cart.findIndex(item => item.id === id);
+      if (index > -1) {
+        cart.splice(index, 1);
+      }
+      updateCart();
+    }
+
+    // Actualiza la vista del carrito y el total de la compra
+    function updateCart() {
+      const cartList = document.getElementById('cartList');
+      const totalElement = document.getElementById('total');
+      if (cart.length === 0) {
+        cartList.innerHTML = '<li class="list-group-item cart-empty">Tu carrito está vacío.</li>';
+      } else {
+        cartList.innerHTML = cart.map(item => `
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <strong>${item.name}</strong><br />
+              <small>Cantidad: ${item.quantity}</small>
+            </div>
+            <div class="text-end">
+              <span>$${(item.price * item.quantity).toFixed(2)}</span>
+              <button class="btn btn-sm btn-outline-danger ms-2" onclick="removeFromCart(${item.id})">Eliminar</button>
+            </div>
+          </li>
+        `).join('');
+      }
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      totalElement.textContent = total.toFixed(2);
+    }
+
+    // Control del botón de finalizar compra
+    document.getElementById('checkoutBtn').addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Agrega al menos un producto para finalizar la compra.');
+        return;
+      }
+      alert('Gracias por tu compra. Total: $' + document.getElementById('total').textContent);
+      cart.length = 0;
+      updateCart();
+    });
+
+    updateCart();
+  </script>
+  <!-- Bootstrap JS local para componentes interactivos -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Computadoras</title>
+  <!-- Estilos de Bootstrap y CSS personalizado -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra de navegación con enlaces a secciones principales -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">CompuStore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#carrito">Carrito</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registrate.html">Regístrate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carrusel de imágenes para mostrar productos destacados o ambiente de la tienda -->
+  <div id="carouselExample" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 800px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="ratio ratio-16x9">
+          <img src="https://images-cdn.ubuy.co.id/64c41e4771c5f52216163af1-hp-stream-14-laptop-intel-celeron.jpg" class="d-block w-100 h-100" style="object-fit:cover; max-height:400px;" alt="Laptop">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="ratio ratio-16x9">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHo_AYdPmiTx4h6Oy7n6LrYZCf3-_ZhZomCg&s" class="d-block w-100 h-100" style="object-fit:cover; max-height:400px;" alt="Laptop">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="ratio ratio-16x9">
+          <img src="https://resource.megaeletronicos.com/uploads/Product/new/1/4/9/7/3/1/149731/68810025b7686.webp" class="d-block w-100 h-100" style="object-fit:cover; max-height:400px;" alt="Laptop">
+        </div>
+      </div>
+    </div>
+    <!-- Controles del carrusel para navegar entre las imágenes -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Sección Sobre Nosotros que describe la tienda y su misión -->
+  <section class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="display-4 fw-bold mb-4">Sobre Nosotros</h2>
+        <p class="lead mb-3">
+          En <strong>CompuStore</strong>, somos una tienda especializada en la venta de laptops y computadoras de alta calidad. Con más de 10 años de experiencia en el mercado, nos hemos posicionado como líderes en la distribución de equipos tecnológicos.
+        </p>
+        <p class="mb-3">
+          Nuestro compromiso es ofrecer a nuestros clientes los mejores productos del mercado, con precios competitivos y un excelente servicio al cliente. Trabajamos directamente con los principales fabricantes para garantizar la autenticidad y calidad de cada equipo que vendemos.
+        </p>
+        <p class="mb-3">
+          Contamos con un equipo de profesionales capacitados y dispuestos a asesorarte en la elección de la laptop que mejor se adapte a tus necesidades, ya sea para trabajo, estudios o entretenimiento.
+        </p>
+        <p>
+          Nuestro objetivo es hacer que la tecnología sea accesible para todos, ofreciendo opciones variadas en diferentes rangos de precio y especificaciones técnicas.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://mx-media.hptiendaenlinea.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/a/4/a41yvlt_02imagenprincipalsintexto.jpg" alt="Tienda CompuStore" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página con enlaces a redes sociales y aviso de derechos reservados -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p class="mb-3 mb-md-2">VISÍTANOS EN NUESTRAS REDES</p>
+      <div class="d-flex justify-content-center gap-3">
+  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="32" height="32" />
+  </a>
+  <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" width="32" height="32" />
+  </a>
+  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="32" height="32" />
+  </a>
+  <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="32" height="32" />
+  </a>
+</div>
+      <p class="mt-3 mb-0">© 2026 Derechos Reservados</p>
+    </div>
+  </footer>
+  <!-- Scripts de Bootstrap para los componentes interactivos -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

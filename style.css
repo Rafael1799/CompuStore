@@ -1,0 +1,245 @@
+/* ==========================================================================
+  Estilo de la Página...
+   ========================================================================== */
+
+/* Una tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-global: #f8fafc;       /* Nuestro fondo limpio de siempre */
+  --bg-card: #ffffff;         /* Blanco para las tarjetas */
+  --primary: #0f172a;         /* Nuestro azul marino/oscuro elegante */
+  --accent: #2563eb;          /* El azul eléctrico para resaltar detalles */
+  --text-main: #334155;       /* El tono de texto suave para lectura */
+  --text-muted: #64748b;      /* Gris para textos secundarios */
+  --border-color: #e2e8f0;    /* Bordes sutiles */
+}
+
+/* 1. AJUSTES GENERALES */
+body {
+  background-color: var(--bg-global);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.015em; /* Hace que el texto se vea más compacto y limpio */
+}
+
+/* Centrado perfecto de nuestra cuadrícula de productos */
+#productos {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 4rem 1.5rem !important;
+}
+
+/* Títulos con nuestro peso visual original pero con más "aire" alrededor */
+h1, h2, h3, h4, h5 {
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h2.text-center {
+  font-size: 2.4rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 3.5rem !important;
+}
+
+/* 2. NAVBAR TRASLÚCIDA*/
+.navbar {
+  background-color: rgba(15, 23, 42, 0.95) !important; /* Color oscuro pero con un toque traslúcido */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1rem 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand {
+  font-weight: 800 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: -0.03em !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.08); /* Resalte sutil al pasar el mouse */
+}
+
+/* 3. HERO BANNER (degradado) */
+.hero {
+  background: radial-gradient(circle at top right, #1e3a8a, #0f172a) !important;
+  border: none !important;
+  border-radius: 24px !important; /* Esquinas suavizadas */
+  padding: 6rem 2rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 4rem !important;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08) !important;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem) !important;
+  font-weight: 850 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+}
+
+.hero .lead {
+  color: #94a3b8 !important;
+  font-size: 1.2rem !important;
+  max-width: 650px;
+  margin: 1rem auto 2.5rem !important;
+}
+
+/* 4. TARJETAS DE PRODUCTO*/
+.card-product {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 6px rgba(15, 23, 42, 0.01) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
+}
+
+/* Efecto de elevación suave que no se siente exagerado */
+.card-product:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 30px rgba(15, 23, 42, 0.06) !important;
+  border-color: rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Contenedor de imágenes para que convivan la PC y las Laptops de forma simétrica */
+.card-product .card-img-top {
+  height: 240px !important;
+  object-fit: contain !important;
+  background-color: #ffffff !important;
+  padding: 1.5rem !important; 
+}
+
+.card-product .card-body {
+  padding: 1.75rem !important;
+}
+
+.card-product .card-title {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.6rem !important;
+}
+
+.card-product .card-text {
+  color: var(--text-muted) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+}
+
+.product-price {
+  font-weight: 800 !important;
+  color: var(--accent) !important; /* Azul para destacar el precio */
+  font-size: 1.3rem !important;
+}
+
+/* 5. BOTONES  (Estilo bloque sólido) */
+.btn-primary {
+  background-color: var(--primary) !important; /* Botón oscuro */
+  border-color: var(--primary) !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  padding: 0.65rem 1.5rem !important;
+  font-size: 0.92rem;
+  transition: all 0.2s ease !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent) !important; /* Azul eléctrico en hover */
+  border-color: var(--accent) !important;
+  transform: translateY(-1px);
+}
+
+/* Botón del Hero */
+.hero .btn-light {
+  background-color: #ffffff !important;
+  border: none !important;
+  color: var(--primary) !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  padding: 0.8rem 2.2rem !important;
+  transition: all 0.2s ease;
+}
+
+.hero .btn-light:hover {
+  background-color: #f1f5f9 !important;
+  transform: translateY(-2px);
+}
+
+/* 6. EL CARRITO (Limpio y ordenado) */
+#carrito .card {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* 7. EL CARRUSEL (Página Nosotros) */
+#carouselExample {
+  max-width: 850px !important;
+  margin: 4rem auto !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05) !important;
+}
+
+#carouselExample .carousel-item {
+  height: 400px !important;
+}
+
+/* 8. EL FOOTER Y TUS ÍCONOS DE REDES */
+footer {
+  background-color: #0f172a !important; /* Fondo oscuro */
+  padding: 4rem 0 !important;
+  margin-top: 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p.mb-3 {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  color: #94a3b8 !important;
+}
+
+/* Círculos interactivos para redes sociales */
+footer .d-flex a {
+  background-color: rgba(255, 255, 255, 0.05); 
+  padding: 12px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+footer .d-flex a img {
+  width: 24px !important;
+  height: 24px !important;
+  filter: brightness(0) invert(1) opacity(0.8) !important; /* Tus íconos blancos ultra limpios */
+  transition: all 0.25s ease !important;
+}
+
+/* Interacción: al pasar el mouse se iluminan y recuperan su color real */
+footer .d-flex a:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+footer .d-flex a:hover img {
+  filter: none !important;
+}
